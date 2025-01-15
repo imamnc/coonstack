@@ -47,5 +47,13 @@ RUN php --version && composer --version && node --version && npm --version
 # Change WORKDIR
 WORKDIR /var/www/html/php80
 
-# Verify the Composer installation
-RUN composer --version
+# Copy the entrypoint script into the container
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
+# Make the script executable
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+# Set the entrypoint script as the container's entrypoint
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+
+CMD [ "php-fpm" ]
