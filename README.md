@@ -51,11 +51,12 @@ coontstack/
 
 2. **Set Up Environment Variables**:
 
-   - Copy the example `.env` file and configure it according to your needs.
-     ```bash
-     cd core
-     cp .env.example .env
-     ```
+   Copy the example `.env` file and configure it according to your needs.
+
+   ```bash
+   cd core
+   cp .env.example .env
+   ```
 
 3. **Start the Stack**:
 
