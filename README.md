@@ -29,6 +29,7 @@ coontstack/
 ├── core/
 │   ├── go/                 # Golang service files
 │   ├── nginx/              # Nginx configurations
+│   ├── php74/              # PHP 7.4 service files
 │   ├── php80/              # PHP 8.0 service files
 │   ├── php83/              # PHP 8.3 service files
 │   ├── redis/              # Redis configuration
