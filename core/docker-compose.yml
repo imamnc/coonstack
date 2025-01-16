@@ -50,6 +50,7 @@ services:
       - ../projects:/var/www/html
       - ./php83/php.ini:/usr/local/etc/php/php.ini
       - ./php83/crontab/jobs:/etc/crontabs/jobs
+      - ./php83/supervisor:/etc/supervisor.d
     networks:
       - kacoonet
     environment:
@@ -70,6 +71,7 @@ services:
       - ../projects:/var/www/html
       - ./php80/php.ini:/usr/local/etc/php/php.ini
       - ./php80/crontab/jobs:/etc/crontabs/jobs
+      - ./php80/supervisor:/etc/supervisor.d
     networks:
       - kacoonet
     environment:
@@ -90,6 +92,7 @@ services:
       - ../projects:/var/www/html
       - ./php74/php.ini:/usr/local/etc/php/php.ini
       - ./php74/crontab/jobs:/etc/crontabs/jobs
+      - ./php74/supervisor:/etc/supervisor.d
     networks:
       - kacoonet
     environment:

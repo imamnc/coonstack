@@ -3,7 +3,7 @@ FROM php:8.0.3-fpm-alpine
 
 # Install OS packages
 RUN apk add --no-cache --virtual .build-deps gcc g++ autoconf libc-dev \
-    && apk add --no-cache bash git nano zlib zlib-dev libzip-dev libpng-dev libjpeg-turbo-dev freetype-dev libwebp-dev curl curl-dev unzip postgresql-dev mariadb-client mariadb-connector-c-dev icu-dev \
+    && apk add --no-cache bash git nano supervisor zlib zlib-dev libzip-dev libpng-dev libjpeg-turbo-dev freetype-dev libwebp-dev curl curl-dev unzip postgresql-dev mariadb-client mariadb-connector-c-dev icu-dev \
     && apk del .build-deps
 
 # Install PHP Extensions
@@ -54,6 +54,4 @@ COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Set the entrypoint script as the container's entrypoint
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-
-CMD [ "php-fpm" ]
+CMD ["/usr/local/bin/docker-entrypoint.sh"]
